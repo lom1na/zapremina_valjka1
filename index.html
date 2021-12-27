@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sabiranje 2 broja</title>
+</head>
+<body>
+        
+    <p>Unesite poluprecnik valjka r:</p>
+    <input type="text"  id="r">
+    <p>Unesite visnu valjka H:</p>
+    <input type="text" id="h">
+
+    <p><button id="izracunaj">Izracunaj zapreminu</button></p>
+    <p><b>Zapremina valjka je:</b><span id="rezultat">0</span></p>
+
+
+    <script>
+       function izracunaj(){
+        const Pi = 3.14;
+        const input_r = document.getElementById("r");
+        const input_h = document.getElementById("h");
+        const input_precnik = Number(input_r.value)
+        const input_visina = Number(input_h.value)
+        const input_rezultat = document.getElementById("rezultat")
+        return input_rezultat.innerHTML =( (Math.pow(input_precnik,2)) * input_visina * Pi)
+       }
+        
+       
+        const input_dugme = document.getElementById("izracunaj")
+        input_dugme.onclick = izracunaj
+        
+    </script>
+
+</body>
+</html>
